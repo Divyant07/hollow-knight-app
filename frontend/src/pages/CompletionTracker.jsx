@@ -15,7 +15,9 @@ const DATA = {
       { id: "b7", name: "Broken Vessel", location: "Ancient Basin" },
       { id: "b8", name: "The Hollow Knight", location: "Temple of the Black Egg" },
       { id: "b9", name: "Radiance", location: "Dream Realm" },
-    ],
+    ], 
+    viewAll: true, 
+    route: "/bosses"
   },
   Charms: {
     total: 45,
@@ -28,6 +30,8 @@ const DATA = {
       { id: "c6", name: "Quick Slash", location: "Soul Sanctum" },
       { id: "c7", name: "Mark of Pride", location: "Mantis Village" },
     ],
+    viewAll: true,
+    route: "/charms"
   },
   Grubs: {
     total: 46,
@@ -39,6 +43,8 @@ const DATA = {
       { id: "g4", name: "Grub #4", location: "Fungal Wastes" },
       { id: "g5", name: "Grub #5", location: "City of Tears" },
     ],
+    viewAll: true,
+    route: "/grubs"
   },
   Equipment: {
     total: 12,
@@ -49,6 +55,8 @@ const DATA = {
       { id: "e4", name: "Monarch Wings", location: "Ancient Basin" },
       { id: "e5", name: "Shade Cloak", location: "The Abyss" },
     ],
+    viewAll: true,
+    route: "/equipment"
   },
 };
 
@@ -125,8 +133,8 @@ export default function CompletionTracker() {
                   )}
 
                   {data.viewAll && (
-                    <div className="ct-view-all" onClick={() => navigate("/grubs")}>
-                      View all grubs →
+                    <div className="ct-view-all" onClick={() => navigate(data.route)}>
+                      View all {cat.toLowerCase()} →
                     </div>
                   )}
                 </div>
