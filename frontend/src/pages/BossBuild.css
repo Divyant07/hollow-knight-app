@@ -1,0 +1,169 @@
+.bb-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #09090b;
+}
+
+.bb-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #1c1c1f;
+  flex-shrink: 0;
+}
+
+.bb-back {
+  font-size: 13px;
+  color: #71717a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.12s;
+}
+
+.bb-back:hover { color: #e4e4e7; }
+
+.bb-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e4e4e7;
+}
+
+.bb-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Boss list */
+.bb-list {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid #1c1c1f;
+  overflow-y: auto;
+}
+
+.bb-list::-webkit-scrollbar { width: 3px; }
+.bb-list::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+
+.bb-entry {
+  padding: 12px 20px;
+  border-bottom: 1px solid #1c1c1f;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.bb-entry:hover { background: #111114; }
+.bb-entry.sel { background: #111114; border-left: 2px solid #52525b; }
+
+.bb-entry-name {
+  display: block;
+  font-size: 13px;
+  color: #d4d4d8;
+}
+
+.bb-entry-area {
+  display: block;
+  font-size: 11px;
+  color: #3f3f46;
+  margin-top: 3px;
+}
+
+/* Panels */
+.bb-panels {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bb-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #3f3f46;
+}
+
+.bb-panel {
+  padding: 20px 24px;
+}
+
+.bb-panel-top {
+  flex: 1;
+  border-bottom: 1px solid #1c1c1f;
+  overflow-y: auto;
+}
+
+.bb-panel-bot {
+  height: 140px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.bb-panel-label {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3f3f46;
+  margin-bottom: 14px;
+}
+
+.bb-charms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bb-charm-pill {
+  font-size: 12px;
+  color: #a1a1aa;
+  background: #111114;
+  border: 1px solid #27272a;
+  border-radius: 20px;
+  padding: 5px 14px;
+}
+
+.bb-nail-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bb-nail-key {
+  font-size: 12px;
+  color: #71717a;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.bb-nail-bars {
+  display: flex;
+  gap: 4px;
+}
+
+.bb-bar {
+  width: 20px;
+  height: 5px;
+  border-radius: 2px;
+  background: #27272a;
+  transition: background 0.15s;
+}
+
+.bb-bar.filled { background: #71717a; }
+
+.bb-tag {
+  font-size: 12px;
+  color: #a1a1aa;
+  background: #111114;
+  border: 1px solid #27272a;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
